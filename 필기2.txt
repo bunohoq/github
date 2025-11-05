@@ -1,0 +1,98 @@
+GitHub
+- 온라인 저장소를 제공하는 서비스
+
+
+GitHub 역할
+1. 로컬 리포지터리의 백업용 > 구글 드라이브
+2. 장소 간의 리포지터리의 이동용 > 집 + 사무실
+3. 다른 사람들과의 협업
+
+
+GitHub 가입
+- http://github.com/
+
+
+로컬 > 접속 > GitHub
+1. 예전 > 아이디 + 암호 입력
+2. 2021년 이후 > PAT 토큰 사용
+
+
+PAT 발급받기
+
+
+
+
+
+
+
+로컬 리포지터리의 백업용 > 구글 드라이브
+장소 간의 리포지터리의 이동용 > 집 + 사무실
+
+
+1. 원격 리포지터리 생성하기
+- GitHub 사이트
+
+2. 로컬 리포지터리 생성하기
+
+"index" > commit "create"
+"index" > commit "update"
+
+3. 둘을 연결하기
+
+$ git remote add origin 
+
+$ 
+
+$ git branch -M main  //default branch 설정하기
+
+//파일의 업로드/다운로드 > X
+//커밋의 업로드/다운로드 > X
+//+ 브랜치 단위로
+
+$ git push --set-upstream origin main https://github.com/bunohoq/github
+$ git push -u origin main
+
+
+4. 집에서 원격 리포지터리를 연결하기
+- 처음(로컬 리포지터리가 없는 상태)
+- PAT 등록(자격 증명 관리자)
+
+$ git clone <원격 리포지터리 URL> 
+$ git clone https://github.com/bunohoq/github
+
+5. 집에서 추가 작업
+
+"board.txt"
+
+게시판
+- 목록보기
+- 글쓰기
+
+$ git add .
+$ git commit -m "create board.txt"
+
+
+깃헙에 올리기
+
+//형재 브랜치의 모든 커밋이 업로드된다.
+$ git push origin main
+현재브랜치|원격URL 원격브랜치명
+
+
+"board.txt"
+
+게시판
+- 목록보기
+- 글쓰기
+- 상세보기
+
+$ git add .
+$ git commit -m "update board.txt"
+
+
+
+6. 다시 출근 > 집에 작업한 내용을 동기화
+
+$ git pull origin main
+
+merge이 자동으로 되는거라고 생각하면 됨
